@@ -12,6 +12,7 @@ export class UserComponentComponent {
     avatar: string;
     name: string;
   };
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter();
   get imagePath() {
     return 'assets/users/' + this.user.avatar;
